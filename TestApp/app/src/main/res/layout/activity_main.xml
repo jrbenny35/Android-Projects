@@ -24,14 +24,15 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Date Of Games"
-        android:id="@+id/textView2"
+        android:id="@+id/date"
         android:layout_gravity="center_horizontal" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,9 +45,11 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editText"
+            android:id="@+id/game1ScoreEditText"
             android:layout_weight="1"
-            android:text="300" />
+            android:text="300"
+            android:maxLength="3"
+            android:minWidth="20dp" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -65,9 +68,11 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editText"
+            android:id="@+id/game2ScoreEditText"
             android:layout_weight="1"
-            android:text="300" />
+            android:text="300"
+            android:maxLength="3"
+            android:minWidth="6dp" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -86,9 +91,11 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editText"
+            android:id="@+id/game3ScoreEditText"
             android:layout_weight="1"
-            android:text="300" />
+            android:text="300"
+            android:maxLength="3"
+            android:minWidth="6dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -101,15 +108,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Total Of Games"
-            android:id="@+id/textView4" />
+            android:text="Total Of Games:"
+            android:id="@+id/seriesTotal" />
 
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editText2"
-            android:layout_weight="1"
-            android:text="900" />
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textView2" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -123,13 +130,15 @@
             android:layout_height="wrap_content"
             android:text="Calculate"
             android:id="@+id/button"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:onClick="calculateClickHandler"
+            />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button2"
+            android:text="Show History"
+            android:id="@+id/showHistory"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
 
