@@ -19,13 +19,29 @@
         android:id="@+id/textView"
         android:gravity="center_horizontal" />
 
-    <TextView
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Date Of Games"
-        android:id="@+id/date"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:padding="5dp">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Date"
+            android:id="@+id/button_date_change"
+            android:onClick="changeDateClickHandler" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Date Of Games"
+            android:id="@+id/date" />
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"

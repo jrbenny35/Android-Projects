@@ -2,6 +2,7 @@ package com.example.bennyjr.testapp;
 
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.text.DateFormat;
@@ -47,6 +48,8 @@ public class BowlingScore {
             game = 1;
             showError(game);
         }
+
+        Log.d("BowlingScore Object", "Added game 1");
     }
 
     public int getGame2() {
@@ -61,6 +64,8 @@ public class BowlingScore {
             game = 2;
             showError(game);
         }
+
+        Log.d("BowlingScore Object", "Added game 2");
     }
 
     public int getGame3() {
@@ -74,6 +79,8 @@ public class BowlingScore {
             game = 3;
             showError(game);
         }
+
+        Log.d("BowlingScore Object", "Added game 3");
     }
 
     public Date getDate() {
