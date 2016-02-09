@@ -11,7 +11,8 @@ import java.util.Date;
 /**
  * Created by bennyjr on 2/1/16.
  */
-public class BowlingScore {
+public class BowlingScore extends BowlingScoresId {
+
 
     private int game1;
     private int game2;
@@ -27,6 +28,14 @@ public class BowlingScore {
         this.game3 = game3;
         this.date = date;
         this.context = context;
+    }
+
+    public BowlingScore(long id, long date, int game1, int game2, int game3){
+        super.setId(id);
+        setDateEpoch(date);
+        this.game1 = game1;
+        this.game2 = game2;
+        this.game3 = game3;
     }
 
     public BowlingScore(){
@@ -91,6 +100,14 @@ public class BowlingScore {
         this.date = date;
     }
 
+    public long getDateEpoch(){
+        return date.getTime()/1000;
+    }
+
+    public void setDateEpoch(long seconds){
+        date = new Date(seconds * 1000);
+    }
+
     private int calculateSeriesTotal(){
         return game1 + game2 + game3;
     }
@@ -111,6 +128,15 @@ public class BowlingScore {
         this.game = 0;
     }
 
+    @Override
+    public long getId() {
+        return super.getId();
+    }
+
+    @Override
+    public void setId(long id) {
+        super.setId(id);
+    }
 
     @Override
     public String toString() {
@@ -118,6 +144,7 @@ public class BowlingScore {
         DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.MEDIUM);
 
         return "BowlingScores{" +
+                "ID= " + super.getId() +
                 "game1= " + game1 +
                 ", game2= " + game2 +
                 ", game3= " + game3 +
